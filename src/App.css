@@ -1,0 +1,31 @@
+.login{
+  background-image: url("Media/bg-banner.png");
+  background-color: #612D91;
+
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 400px;
+  
+ 
+}
+
+.btn1{
+  border-radius: 10px;
+}
+
+.login1{
+  background-image: url("Media/bg-banner.png");
+  background-color: #912d7a;
+
+}
+
+.login2{
+  background-image: url("Media/bg-banner.png");
+  background-color: #cdc3d6;
+}
+

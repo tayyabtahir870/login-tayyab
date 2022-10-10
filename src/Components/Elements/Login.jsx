@@ -22,7 +22,7 @@ function Login() {
             <h1>Login </h1> <br />
             <h5>Lets go gets started</h5>
             <br />
-            <label>Email</label>
+            <label>Email</label> <br />
             <input
               className="btn1"
               type="text"
@@ -33,7 +33,7 @@ function Login() {
             />
             <br />
             <br />
-            <h5>Password</h5>
+            <label>Password</label> <br />
             <input
               className="btn1"
               name="password"

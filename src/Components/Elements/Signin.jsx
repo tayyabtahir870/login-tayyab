@@ -22,7 +22,7 @@ function Signin() {
         <h1>Sign up </h1> <br />
         <h5>Please Enter your Details to join us</h5>
         <br />
-        <label>Name</label>
+        <label>Name</label> <br />
         <input
           className="btn1"
           type="text"
@@ -32,8 +32,9 @@ function Signin() {
           placeholder="Enter Your Username"
         />
         <br />
-        <label>Password</label>
+        <label>Password</label> <br />
         <input className="btn1" type="password"   onChange={event=>{setPassword(event.target.value)}} placeholder="Enter Your Password" />
+        <br />
         <br />
         <button type="submit" className="btn btn-dark" to="">
           {" "}

@@ -35,7 +35,7 @@ function Header() {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -64,12 +64,12 @@ function Header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+                <a className="nav-link disabled" href="/">Disabled</a>
               </li>
             </ul>
            
             <Link  className="btn btn-light" to="/login">Login</Link>
-            <Link  className="btn btn-light" to="/signin">sign up</Link>
+            <Link  className="btn btn-light" to="/signup">sign up</Link>
           </div>
         </div>
       </nav>

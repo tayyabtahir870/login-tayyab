@@ -1,46 +1,50 @@
-import React from 'react'
-import { useNavigate, } from "react-router-dom";
-import {useEffect} from "react"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Home() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-      let authToken = sessionStorage.getItem("auth");
-      if (authToken) {
-        navigate("/home");
-      }
-      if (!authToken) {
-        navigate("/login");
-      }
-    }, [navigate]);
-  
-    const logout = () => {
-      sessionStorage.removeItem("auth");
+  useEffect(() => {
+    let authToken = sessionStorage.getItem("auth");
+    if (authToken) {
+      navigate("/home");
+    }
+    if (!authToken) {
       navigate("/login");
-    };
+    }
+  }, [navigate]);
+
+  const logout = () => {
+    sessionStorage.removeItem("auth");
+    navigate("/login");
+  };
   return (
     <div className="bg">
       <div className="container py-5">
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8 signup">
-              <div className="card " style={{ width: "500px" }}>
-                <div>
-                    <h2>Welcome To Home</h2>
-                </div>
-                <div>
-                <button type="button" className="btn btn-primary" onClick={logout}>
-                    logout
-                  </button>
-                </div>
+            <div className="card " style={{ width: "500px" }}>
+              <div>
+                <h2>Welcome To Home</h2>
               </div>
+              <div>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={logout}
+                >
+                  logout
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-md-2"></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Home;

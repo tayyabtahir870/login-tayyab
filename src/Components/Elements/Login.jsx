@@ -4,15 +4,17 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-function Login({title, setEmail, setPassword, handleAction}) {
+function Login({ title, setEmail, setPassword, handleAction }) {
   return (
     <div className="login">
       <div className="container p-5  ">
         <div className=" card text-center  py-5  ">
-          <h1>Login </h1> <br />
+          <h1>Login </h1>
           <h5>Lets go gets started</h5>
           <br />
-          <label>Email</label> <br />
+          <label>
+            <b>Email</b>
+          </label>
           <input
             className="btn1"
             type="text"
@@ -22,8 +24,9 @@ function Login({title, setEmail, setPassword, handleAction}) {
             placeholder="Enter Your Username"
           />
           <br />
-          <br />
-          <label>Password</label> <br />
+          <label>
+            <b>Password</b>
+          </label>
           <input
             className="btn1"
             name="password"
@@ -34,16 +37,13 @@ function Login({title, setEmail, setPassword, handleAction}) {
             placeholder="Enter Your Password"
           />
           <br />
-          <br />
           <button type="submit" className="btn btn-dark" onClick={handleAction}>
             {title}
           </button>
-          <Link to="/signup">Signup</Link>
-          <h5>Follow us on</h5>
-          <span>
-            <BsFacebook color="#1773EA" size={30} /> &nbsp;
-            <AiFillTwitterCircle color="#1DA1F2 " size={30} />
-          </span>
+          <br />
+          <Link type="button" to="/" class="btn btn-secondary">
+            Sign up
+          </Link>
         </div>
       </div>
     </div>

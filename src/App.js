@@ -6,7 +6,7 @@ import { useNavigate, Routes, Route } from "react-router-dom";
 import {
   getAuth,
   signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
+  createUserWithEmailAndPassword,sendPasswordResetEmail
 } from "firebase/auth";
 import Signup from "./Components/Elements/Signin";
 import { collection, addDoc } from "firebase/firestore";
@@ -14,6 +14,7 @@ import db from "./firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import Home from "./Components/Elements/Home";
+import Passward from "./Components/Elements/Passward";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -64,13 +65,35 @@ function App() {
           }
         });
     }
+
+   
+
   };
+  const passwardRset = () => {
+
+    const auth = getAuth();
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        console.log('verify')
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  }
+
+ 
   return (
-    <div className="App">
+    <div >
       <ToastContainer />
 
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/passward" element={<Passward
+        passwardReset={passwardRset}
+        setEmail={setEmail}
+        />} />
         <Route
           path="/login"
           element={

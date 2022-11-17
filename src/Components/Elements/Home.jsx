@@ -35,7 +35,7 @@ function Home() {
                   className="btn btn-primary"
                   onClick={logout}
                 >
-                  logout
+                  Logout
                 </button>
               </div>
             </div>

@@ -36,6 +36,9 @@ function Login({ title, setEmail, setPassword, handleAction }) {
             }}
             placeholder="Enter Your Password"
           />
+          <Link to="/passward" className="passward">
+            forget passward
+          </Link>
           <br />
           <button type="submit" className="btn btn-dark" onClick={handleAction}>
             {title}

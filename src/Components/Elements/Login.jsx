@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 
 function Login({ title, setEmail, setPassword, handleAction }) {
   return (
-    <div className="login">
+    <div className="">
       <div className="container p-5  ">
-        <div className=" card text-center  py-5  ">
+        <div className="row">
+          <div className="col">
+          <div className=" card text-center  py-5  ">
           <h1>Login </h1>
           <h5>Lets go gets started</h5>
           <br />
@@ -37,7 +39,7 @@ function Login({ title, setEmail, setPassword, handleAction }) {
             placeholder="Enter Your Password"
           />
           <Link to="/passward" className="passward">
-            forget passward
+            Forget passward
           </Link>
           <br />
           <button type="submit" className="btn btn-dark" onClick={handleAction}>
@@ -48,7 +50,17 @@ function Login({ title, setEmail, setPassword, handleAction }) {
             Sign up
           </Link>
         </div>
+          </div>
+
+
+       <div className="col">
+
+        <img className="img-fluid mt-5" src="Assests/login.jpg" alt="" width={500} />
+
+       </div>
+       
       </div>
+    </div>
     </div>
   );
 }

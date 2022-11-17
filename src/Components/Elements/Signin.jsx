@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 function Signin({ title, setEmail, setPassword, handleAction }) {
   return (
-    <div className="login1">
+    <div className="signup">
       <div className="container p-5  ">
-        <div className=" card text-center  py-5  ">
+        <div className="row">
+          <div className="col-md-6">
+          <div className=" card text-center  py-5  ">
           <h1>Sign up </h1>
           <h5>Please Enter your Details to join us</h5>
 
@@ -44,7 +46,15 @@ function Signin({ title, setEmail, setPassword, handleAction }) {
           </Link>
           <br />
         </div>
+          </div>
+
+          <div className="col-md-6">
+            <img className="img-fluid mt-5" src="Assests/signup.jpg" alt="" width={500} />
+
+          </div>
+        
       </div>
+    </div>
     </div>
   );
 }

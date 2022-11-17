@@ -1,7 +1,4 @@
-.login {
-  background-image: url("Media/bg-banner.png");
-  background-color: #612d91;
-}
+
 
 .card {
   display: flex;
@@ -9,20 +6,21 @@
   align-items: center;
   margin: 5rem auto;
   max-width: 400px;
+  border: 1px solid black !important; 
+  background-color: rgb(255, 255, 255) !important; 
 }
 
 .btn1 {
   border-radius: 10px;
 }
 
-.login1 {
-  background-image: url("Media/bg-banner.png");
-  background-color: #912d7a;
+.passward{
+  text-decoration: none;
+  color: black;
 }
 
-.login2 {
-  background-image: url("Media/bg-banner.png");
-  background-color: #cdc3d6;
-}
+
+
+
 
 

@@ -1,44 +1,46 @@
 import React from "react";
-import { useState } from "react";
-import { BsFacebook } from "react-icons/bs";
-import { AiFillTwitterCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login({ title, setEmail, setPassword, handleAction }) {
+  
   return (
     <div className="">
       <div className="container p-5  ">
         <div className="row">
-          <div className="col">
+          <div className="col-md-6">
           <div className=" card text-center  py-5  ">
-          <h1>Login </h1>
-          <h5>Lets go gets started</h5>
+          <h1 className="textcolor">Login </h1>
+          <h5 className="textcolor">Lets go gets started</h5>
+    
           <br />
           <label>
-            <b>Email</b>
+            <b className="textcolor">Email</b>
+            <input
+                      type="text"
+                      className="form-control"
+                      onChange={(event) => {
+                        setEmail(event.target.value);
+                      }}
+                      placeholder="Enter Your Email"
+                    />
           </label>
-          <input
-            className="btn1"
-            type="text"
-            onChange={(event) => {
-              setEmail(event.target.value);
-            }}
-            placeholder="Enter Your Username"
-          />
+         
           <br />
           <label>
-            <b>Password</b>
+            <b className="textcolor">Password</b>
           </label>
+          <div>
           <input
-            className="btn1"
-            name="password"
-            type="password"
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-            placeholder="Enter Your Password"
-          />
-          <Link to="/passward" className="passward">
+                      type="password"
+                      className="form-control"
+                      onChange={(event) => {
+                        setPassword(event.target.value);
+                      }}
+                      placeholder="Enter Your Password"
+                    /> </div>
+           
+          <Link to="/passward" className="passward textcolor">
             Forget passward
           </Link>
           <br />
@@ -53,7 +55,7 @@ function Login({ title, setEmail, setPassword, handleAction }) {
           </div>
 
 
-       <div className="col">
+       <div className="col-md-6">
 
         <img className="img-fluid mt-5" src="Assests/login.jpg" alt="" width={500} />
 

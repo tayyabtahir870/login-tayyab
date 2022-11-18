@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import Login from "./Components/Elements/Login";
@@ -13,12 +13,19 @@ import { collection, addDoc } from "firebase/firestore";
 import db from "./firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./Components/Elements/Home";
 import Passward from "./Components/Elements/Passward";
+import Details from "./Components/Elements/Details";
+import Update from "./Components/Elements/Update";
+import Upload from "./Components/Elements/Upload";
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [contact, setContact] = useState("");
+  const [address, setAddress] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,8 +43,12 @@ function App() {
           navigate("/home");
           sessionStorage.setItem("auth", response._tokenResponse.refreshToken);
           addDoc(collection(db, "users"), {
+            name: name,
             email: email,
             password: password,
+            contact: contact,
+            address: address,
+
           });
         })
         .catch((e) => {
@@ -90,6 +101,8 @@ function App() {
 
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/details" element={<Details/>} />
+        <Route path="/update/:id" element={<Update/>} />
         <Route path="/passward" element={<Passward
         passwardReset={passwardRset}
         setEmail={setEmail}
@@ -105,13 +118,16 @@ function App() {
             />
           }
         />
-
+<Route path='/upload' element={<Upload/>}/>
         <Route
           path="/"
           element={
             <Signup
               setEmail={setEmail}
               setPassword={setPassword}
+              setContact={setContact}
+              setAddress={setAddress}
+              setName={setName}
               handleAction={() => handleAction(2)}
               title={"Register"}
             />

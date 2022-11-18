@@ -1,0 +1,81 @@
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 400px;
+  border: 2px solid #27DEC0 !important;
+  box-shadow: 6px 12px #27DEC0 !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 10px !important; 
+}
+
+.btn1 {
+  border-radius: 5px;
+}
+
+.passward{
+  text-decoration: none;
+  color: black;
+}
+
+.textcolor{
+  color: #465A65;
+}
+
+.signup{
+  .card{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 400px;
+  border: 2px solid #D268CC !important;
+  box-shadow: 6px 12px #D268CC !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 10px !important; 
+  }
+}
+
+.homee{
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 400px;
+    border: 2px solid #F5C1A2 !important;
+    box-shadow: 6px 12px #F5C1A2 !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 10px !important; 
+  }
+  .homeimg{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 90px;
+  }
+}
+
+
+label progress {
+  width: 35px;
+}
+label img {
+  width: 70px;
+  height: 70px;
+}
+
+#input-file {
+  display: none !important;
+}
+
+
+
+
+
+
+
+

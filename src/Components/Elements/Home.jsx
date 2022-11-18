@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 function Home() {
@@ -20,12 +20,11 @@ function Home() {
     navigate("/login");
   };
   return (
-    <div className="bg">
-      <div className="container py-5">
+    <div className="homee">
+      <div className="container py-5 ">
         <div className="row">
-          <div className="col-md-2"></div>
-          <div className="col-md-8 signup">
-            <div className="card " style={{ width: "500px" }}>
+          <div className="col-md-6 mt-5 p-5">
+          <div className="card ">
               <div>
                 <h2>Welcome To Home</h2>
               </div>
@@ -37,11 +36,25 @@ function Home() {
                 >
                   Logout
                 </button>
+                
               </div>
+              <Link to="/details"
+                  type="button"
+                  className=" my-2 btn btn-primary"
+                  onClick={logout}
+                >
+                  show Details
+                </Link>
             </div>
+       
+            
+          </div>
+          <div className="col-md-6 signup p-5 mt-5">
+          <img className="img-fluid homeimg " src="Assests/home.jpg" alt="" width={500} />
+           
           </div>
         </div>
-        <div className="col-md-2"></div>
+      
       </div>
     </div>
   );
